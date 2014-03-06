@@ -31,7 +31,7 @@
 					</goals>
 					<archive>
 						<manifest>
-							<mainClass>eu.leads.WikiDumpParser</mainClass>
+							<mainClass>eu.leads.XmlDumpParser</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
