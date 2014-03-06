@@ -6,4 +6,4 @@ To build a standalone executable:
 mvn clean package assembly:single
 
 Run with:
-java -jar target/wikipedia-snapshot-analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar snapshot.bz2
+java -jar target/wikipedia-snapshot-analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar path/to/snapshot.xml
