@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import org.sweble.wikitext.dumpreader.DumpReader;
 import org.sweble.wikitext.dumpreader.export_0_8.PageType;
 
-import eu.leads.WikiDumpParser.DumpFilter;
+import eu.leads.CompressedDumpParser.DumpFilter;
 
 public class XmlDumpParser {
 	/**
