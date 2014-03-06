@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
  * 
  * @author Valerio Schiavoni
  */
-public class WikiDumpParser {
+public class CompressedDumpParser {
 
 	static HashMap<String, Integer> pageRevisions = new HashMap<String, Integer>();
 	static int entries = 0;
