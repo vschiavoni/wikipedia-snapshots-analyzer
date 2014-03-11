@@ -62,7 +62,8 @@ public class DumbInfinispanClient  {
 	 * @param version a new version
 	 */
 	public void insertPageVersion(PageType pt, Object version){		
-		this.cache.put(pt.getId(), version);		
+		this.cache.put(pt.getId(), version);
+		
 	}
 	
 }
