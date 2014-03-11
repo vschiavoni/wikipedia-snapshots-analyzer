@@ -33,6 +33,14 @@
 					<artifactId>solr-analysis-extras</artifactId>
 					<groupId>org.apache.solr</groupId>
 				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-hql-parser</artifactId>
+					<groupId>org.hibernate.hql</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>lucene-facet</artifactId>
+					<groupId>org.apache.lucene</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
