@@ -22,9 +22,19 @@
 			<version>6.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
+			<groupId>org.infinispan</groupId>
+			<artifactId>infinispan-commons</artifactId>
+			<version>6.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>org.jgroups</groupId>
 			<artifactId>jgroups</artifactId>
 			<version>3.3.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.infinispan</groupId>
+			<artifactId>infinispan-adaptor52x</artifactId>
+			<version>6.0.1.Final</version>
 		</dependency>
 	</dependencies>
 	<build>
