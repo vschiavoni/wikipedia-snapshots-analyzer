@@ -20,6 +20,20 @@
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-versioning</artifactId>
 			<version>6.0.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>infinispan-lucene-directory</artifactId>
+					<groupId>org.infinispan</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-hql-lucene</artifactId>
+					<groupId>org.hibernate.hql</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>solr-analysis-extras</artifactId>
+					<groupId>org.apache.solr</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.infinispan</groupId>
