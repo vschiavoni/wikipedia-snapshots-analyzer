@@ -21,6 +21,11 @@
 			<artifactId>infinispan-versioning</artifactId>
 			<version>6.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jgroups</groupId>
+			<artifactId>jgroups</artifactId>
+			<version>3.3.1.Final</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

@@ -11,6 +11,7 @@ import org.sweble.wikitext.dumpreader.export_0_8.PageType;
 
 public class XmlDumpParser {
 	
+	static Logger logger = Logger.getLogger(XmlDumpParser.class.getClass());
 	
 	
 	/**
@@ -26,7 +27,6 @@ public class XmlDumpParser {
 		String xmlFileName = args[0];
 		
 		final File file = new File(xmlFileName);
-		Logger logger = Logger.getLogger(XmlDumpParser.class.getClass());
 		
 		final DumbInfinispanClient ispnClient= new DumbInfinispanClient();
 		

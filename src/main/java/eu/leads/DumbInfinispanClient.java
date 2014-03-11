@@ -2,6 +2,7 @@ package eu.leads;
 
 import java.io.IOException;
 import java.math.BigInteger;
+import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.infinispan.Cache;
@@ -28,9 +29,16 @@ public class DumbInfinispanClient  {
 		
 	}
 
-	public  void startManager(){
+	public  void startManager(){  
+        try{
+            Properties properties = getProperties();
+            properties.load(DumbInfinispanClient.class.getClassLoader().getResourceAsStream("config.properties"));
+            logger.info("Found properties file.");
+        } catch (IOException e) {
+            logger.info("Found no config.properties file; defaulting.");
+        }
         String infinispanConfig = getProperties().getProperty("infinispanConfigFile");
-
+        
         if(infinispanConfig != null){
             try {
             	cacheManager = new DefaultCacheManager(infinispanConfig);
