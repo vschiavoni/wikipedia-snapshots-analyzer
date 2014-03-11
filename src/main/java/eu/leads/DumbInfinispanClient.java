@@ -2,6 +2,7 @@ package eu.leads;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.infinispan.manager.DefaultCacheManager;
 import org.infinispan.manager.EmbeddedCacheManager;
 import org.sweble.wikitext.dumpreader.export_0_8.PageType;
@@ -9,6 +10,8 @@ import org.sweble.wikitext.dumpreader.export_0_8.PageType;
 import static java.lang.System.getProperties;
 
 public class DumbInfinispanClient  {
+	
+	Logger logger = Logger.getLogger(DumbInfinispanClient.class.getClass());
 	
 	private EmbeddedCacheManager manager;
 	
@@ -32,7 +35,7 @@ public class DumbInfinispanClient  {
             manager = new DefaultCacheManager();
         }
         manager.start();
-        
+        logger.info("Cache manager started.");
     }
 	
 	
