@@ -39,7 +39,8 @@ public class DumbInfinispanClient  {
         if(infinispanConfig != null){
             try {
             	cacheManager = new DefaultCacheManager(infinispanConfig);
-                this.cache = cacheManager.getCache();
+            	String newCacheName = "wikipedia";
+                this.cache = cacheManager.getCache(newCacheName);
             } catch (IOException e) {
                 e.printStackTrace();
                 throw new RuntimeException("Incorrect Infinispan configuration file");
@@ -61,6 +62,14 @@ public class DumbInfinispanClient  {
 	public void insertPageVersion(PageType pt, Object version){		
 		this.cache.put(pt.getId(), version);
 		
+	}
+
+	/**
+	 * Return the number of keys stored in the cache.
+	 * @return
+	 */
+	public int countKeys() {
+		return this.cache.keySet().size();
 	}
 	
 }

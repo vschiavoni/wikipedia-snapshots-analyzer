@@ -15,39 +15,17 @@
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-versioning</artifactId>
-			<version>7.0.0-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>infinispan-lucene-directory</artifactId>
-					<groupId>org.infinispan</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>hibernate-hql-lucene</artifactId>
-					<groupId>org.hibernate.hql</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>solr-analysis-extras</artifactId>
-					<groupId>org.apache.solr</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>hibernate-hql-parser</artifactId>
-					<groupId>org.hibernate.hql</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>lucene-facet</artifactId>
-					<groupId>org.apache.lucene</groupId>
-				</exclusion>
-			</exclusions>
+			<version>7.0.0.Alpha1</version>			
 		</dependency>
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-commons</artifactId>
-			<version>7.0.0-SNAPSHOT</version>
+			<version>7.0.0.Alpha1</version>
 		</dependency>
         <dependency>
             <groupId>org.infinispan</groupId>
             <artifactId>infinispan-core</artifactId>
-            <version>7.0.0-SNAPSHOT</version>
+            <version>7.0.0.Alpha1</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
