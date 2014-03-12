@@ -7,7 +7,7 @@
 
    <global>
       <globalJmxStatistics enabled="true" jmxDomain="Infinispan" />
-      <transport>
+      <transport clusterName="clustered">
          <properties>
             <property name="configurationFile" value="jgroups-tcp.xml" />
          </properties>
@@ -16,22 +16,10 @@
 
    <default>
       <locking concurrencyLevel="5000" />
-      <clustering mode="distributed" />
+      <clustering mode="D" />
        <eviction maxEntries="0" />
        <compatibility enabled="true" />
        <indexing enabled="true" />
    </default>
-
-    <namedCache name="wikipedia">
-        <clustering mode="distributed">
-            <sync />
-        </clustering>
-        <eviction maxEntries="0" />
-        <transaction
-                transactionMode="TRANSACTIONAL"
-                autoCommit="true"
-                />
-    </namedCache>
-
 
 </infinispan>

@@ -1,12 +1,12 @@
 package eu.leads;
 
 
-import java.io.File;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.sweble.wikitext.dumpreader.DumpReader;
 import org.sweble.wikitext.dumpreader.export_0_8.PageType;
+
+import java.io.File;
+import java.util.List;
 
 
 public class XmlDumpParser {
@@ -43,6 +43,6 @@ public class XmlDumpParser {
 				}			
 			}
 		};
-		dr.unmarshal();		
+        dr.unmarshal();
 	}
 }

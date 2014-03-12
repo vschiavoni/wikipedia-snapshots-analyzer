@@ -1,17 +1,14 @@
 package eu.leads;
 
-import java.io.IOException;
-import java.math.BigInteger;
-import java.util.Properties;
-
 import org.apache.log4j.Logger;
 import org.infinispan.Cache;
-import org.infinispan.configuration.cache.CacheMode;
-import org.infinispan.configuration.cache.Configuration;
-import org.infinispan.configuration.cache.ConfigurationBuilder;
 import org.infinispan.manager.DefaultCacheManager;
 import org.infinispan.manager.EmbeddedCacheManager;
 import org.sweble.wikitext.dumpreader.export_0_8.PageType;
+
+import java.io.IOException;
+import java.math.BigInteger;
+import java.util.Properties;
 
 import static java.lang.System.getProperties;
 
@@ -42,15 +39,7 @@ public class DumbInfinispanClient  {
         if(infinispanConfig != null){
             try {
             	cacheManager = new DefaultCacheManager(infinispanConfig);
-                
-                Configuration dcc = cacheManager.getDefaultCacheConfiguration();
-                Configuration c = new ConfigurationBuilder().read(dcc).clustering().cacheMode(CacheMode.DIST_SYNC).l1().lifespan(60000L).build();
-                 
-                String newCacheName = "wikipedia";
-                cacheManager.defineConfiguration(newCacheName, c);
-                this.cache = cacheManager.getCache(newCacheName);
-                
-                
+                this.cache = cacheManager.getCache();
             } catch (IOException e) {
                 e.printStackTrace();
                 throw new RuntimeException("Incorrect Infinispan configuration file");

@@ -3,7 +3,7 @@
         xsi:schemaLocation="http://www.jgroups.org/schema/JGroups-3.2.xsd‎">
 
    <TCP
-        bind_addr="${jgroups.tcp.address:192.168.79.123}"
+        bind_addr="${jgroups.tcp.address:127.0.0.1}"
         port_range="30"
         recv_buf_size="20m"
         send_buf_size="640k"
@@ -31,7 +31,7 @@
         oob_thread_pool.rejection_policy="Discard"        
          />
 
-   <BPING dest="192.168.79.255" bind_port="37001"/>
+   <BPING dest="127.0.0.1" bind_port="36001"/>
 
    <MERGE2 max_interval="30000" min_interval="10000"/>
    <FD_SOCK/>
