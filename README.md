@@ -1,17 +1,18 @@
 wikipedia-snapshots-analyzer
 ============================
 
-To use the binary executable:
-````bash
-java -jar bin/wikipedia-snapshot-analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar path/to/snapshot.xml
-```
 
-To build from source :
+To build :
 ```bash
 mvn clean package assembly:single
 ```
 
-Run with:
+Run an infinispan node with: 
 ```bash
-java -jar target/wikipedia-snapshot-analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar path/to/snapshot.xml
+java -jar target/wikipedia-snapshot-analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+```
+
+Run a client with:
+```bash
+java -DISPN_CLIENT -jar target/wikipedia-snapshot-analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar path/to/snapshot.xml
 ```
