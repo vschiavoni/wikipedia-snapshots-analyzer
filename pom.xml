@@ -6,11 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<dependencies>
-		<dependency>
-			<groupId>info.bliki.wiki</groupId>
-			<artifactId>bliki-core</artifactId>
-			<version>3.0.19</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.sweble.wikitext</groupId>
 			<artifactId>swc-dumpreader</artifactId>
