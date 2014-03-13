@@ -15,17 +15,17 @@
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-versioning</artifactId>
-			<version>7.0.0.Alpha1</version>			
+			<version>7.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-commons</artifactId>
-			<version>7.0.0.Alpha1</version>
+			<version>7.0.0-SNAPSHOT</version>
 		</dependency>
         <dependency>
             <groupId>org.infinispan</groupId>
             <artifactId>infinispan-core</artifactId>
-            <version>7.0.0.Alpha1</version>
+            <version>7.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>

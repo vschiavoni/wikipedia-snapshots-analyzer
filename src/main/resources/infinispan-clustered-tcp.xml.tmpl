@@ -7,7 +7,7 @@
 
    <global>
       <globalJmxStatistics enabled="true" jmxDomain="Infinispan" />
-      <transport clusterName="clustered" nodeName="client">
+      <transport clusterName="clustered" nodeName="@NODE_IP@">
          <properties>
             <property name="configurationFile" value="jgroups-tcp.xml" />
          </properties>

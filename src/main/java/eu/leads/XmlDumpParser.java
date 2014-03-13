@@ -19,7 +19,7 @@ public class XmlDumpParser {
 
 		final DumbInfinispanClient ispnClient = new DumbInfinispanClient();
 
-		if (System.getProperty("ISPN_CLIENT") != null) {		
+		if (System.getProperty("ISPN_CLIENT") != null) {
 			String xmlFileName = args[0];
 			final File file = new File(xmlFileName);
 			logger.info("Start parsing dump file "+xmlFileName);
