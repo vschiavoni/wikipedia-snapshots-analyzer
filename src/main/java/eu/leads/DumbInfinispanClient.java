@@ -5,7 +5,7 @@ import org.infinispan.commons.api.BasicCache;
 import org.infinispan.container.versioning.NumericVersionGenerator;
 import org.infinispan.manager.DefaultCacheManager;
 import org.infinispan.manager.EmbeddedCacheManager;
-import org.infinispan.versioning.impl.VersionedCacheAtomicMapImpl;
+import org.infinispan.versioning.impl.VersionedCacheAtomicTreeMapImpl;
 import org.sweble.wikitext.dumpreader.export_0_8.PageType;
 
 import java.io.IOException;
@@ -43,7 +43,7 @@ public class DumbInfinispanClient  {
             	cacheManager = new DefaultCacheManager(infinispanConfig);
             	String newCacheName = "default";
                 NumericVersionGenerator generator = new NumericVersionGenerator();
-                this.cache = new VersionedCacheAtomicMapImpl<>(cacheManager.getCache(newCacheName),generator,"versionedCache");
+                this.cache = new VersionedCacheAtomicTreeMapImpl<>(cacheManager.getCache(newCacheName),generator,"versionedCache");
             } catch (IOException e) {
                 e.printStackTrace();
                 throw new RuntimeException("Incorrect Infinispan configuration file");

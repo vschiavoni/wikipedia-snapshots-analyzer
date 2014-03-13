@@ -3,6 +3,7 @@ package eu.leads;
 import org.apache.log4j.Logger;
 import org.sweble.wikitext.dumpreader.DumpReader;
 import org.sweble.wikitext.dumpreader.export_0_8.PageType;
+import org.sweble.wikitext.dumpreader.export_0_8.RevisionType;
 
 import java.io.File;
 import java.util.List;
@@ -30,7 +31,7 @@ public class XmlDumpParser {
 					List<Object> items = p.getRevisionOrUpload();
 					logger.info("nbRevisions: " + items.size());
 					for (Object v : items) {
-						ispnClient.insertPageVersion(p, "dummy");
+						ispnClient.insertPageVersion(p, ((RevisionType)v).getText().getValue());
 //						ispnClient.insertPageVersion(p, v);
 					}
 				}
