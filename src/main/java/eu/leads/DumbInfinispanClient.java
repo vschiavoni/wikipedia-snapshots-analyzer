@@ -48,10 +48,6 @@ public class DumbInfinispanClient  {
                 e.printStackTrace();
                 throw new RuntimeException("Incorrect Infinispan configuration file");
             }
-        }else{
-        	cacheManager = new DefaultCacheManager();
-        	String newCacheName = "wikipedia";
-        	this.cache = cacheManager.getCache(newCacheName);
         }
         cacheManager.start();
         logger.info("Cache manager started.");
