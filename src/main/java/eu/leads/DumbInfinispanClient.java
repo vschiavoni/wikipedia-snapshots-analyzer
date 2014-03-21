@@ -16,8 +16,13 @@ public class DumbInfinispanClient  {
 	public DumbInfinispanClient(){
 		
 		this.factory= new VersionedCacheFactory();
-		
-		cache = factory.newVersionedCache(VersionedCacheFactory.VersioningTechnique.NAIVE, "default");
+		String tech=System.getProperty("versioningTechnique");
+		if (tech==null){
+			tech= VersionedCacheFactory.VersioningTechnique.ATOMICMAP.name();
+			logger.info("No 'versioningTechnique' system property specified, falling back to "+tech);
+		}
+		logger.info("Creating new versioned cache of type:"+ tech);
+		cache = factory.newVersionedCache(VersionedCacheFactory.VersioningTechnique.valueOf(tech), "default");
 		
 	}
 	

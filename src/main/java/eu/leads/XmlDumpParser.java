@@ -46,7 +46,7 @@ public class XmlDumpParser {
 			logger.info("Waiting for other nodes...");
 			while (true){
 				Thread.sleep(1000);
-				logger.info("Current number of keys in 'wikipedia' cache: "+ ispnClient.countKeys());
+				logger.info("Current number of keys in cache: "+ ispnClient.countKeys());
 
 			}
 		}
